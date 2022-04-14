@@ -84,7 +84,7 @@ function App() {
                   </svg>
                </span>{" "}
                {content}
-               <div className="flex justify-center text-lg gap-2 pt-2">
+               <div className="flex justify-center flex-col sm:flex-row text-sm sm:text-lg gap-1 pt-2">
                   {tags.map((elemen, i) => {
                      return (
                         <a
