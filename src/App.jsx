@@ -68,10 +68,10 @@ function App() {
    const { twitLink, tumbLink } = link;
 
    return (
-      <div className={`${bgColor} w-[100vw] h-[100vh] flex justify-center items-center  duration-500`}>
-         <div className="bg-white w-[650px] rounded-sm px-10 py-8" id="quote-box">
+      <div className={`${bgColor} w-[100vw] h-[100vh] flex justify-center items-center duration-500`}>
+         <div className="bg-white w-[80vw] sm:w-[650px] rounded-sm px-10 py-8" id="quote-box">
             <blockquote
-               className={`text-3xl font-medium font-raleway text-center ${textColor} duration-500`}
+               className={`text-2xl sm:text-3xl font-medium font-raleway text-center ${textColor} duration-500`}
                id="text"
             >
                <span className=" inline-block ">
@@ -88,7 +88,7 @@ function App() {
                   {tags.map((elemen, i) => {
                      return (
                         <a
-                           className="hover:underline"
+                           className="hover:underline focus:ring-2 outline-none"
                            href={`https://twitter.com/hashtag/${elemen}?`}
                            key={i}
                         >
@@ -102,11 +102,11 @@ function App() {
                {" "}
                - {author}
             </p>
-            <div className="flex justify-between">
-               <div className="flex gap-3 ">
-                  <a href={twitLink} id="tweet-quote">
+            <div className="flex items-end flex-col sm:flex-row sm:justify-between gap-2 ">
+               <div className="flex gap-4">
+                  <a href={twitLink} className="outline-none" id="tweet-quote">
                      <button
-                        className={`${bgColor} hover:opacity-60 h-11 w-11 rounded-sm px-3 duration-500`}
+                        className={`${bgColor} hover:opacity-60 h-11 w-12 rounded-sm px-3 duration-500 focus:ring-2 ring-offset-2 outline-none`}
                         id="twitter-quote"
                      >
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" className="fill-white">
@@ -114,9 +114,9 @@ function App() {
                         </svg>
                      </button>
                   </a>
-                  <a href={tumbLink}>
+                  <a href={tumbLink} className="outline-none">
                      <button
-                        className={`${bgColor} hover:opacity-60 h-11 w-11 rounded-sm px-3 duration-500`}
+                        className={`${bgColor} hover:opacity-60 h-11 w-12 rounded-sm px-3 duration-500 focus:ring-2 ring-offset-2 outline-none`}
                         id="tumble-quote"
                      >
                         <svg
@@ -130,7 +130,7 @@ function App() {
                   </a>
                </div>
                <button
-                  className={`${bgColor} hover:opacity-60 h-11 w-28 rounded-sm text-white font-raleway duration-500`}
+                  className={`${bgColor} hover:opacity-60 h-11 w-28 rounded-sm text-white font-raleway duration-500 focus:ring-2 ring-offset-2 outline-0 `}
                   id="new-quote"
                   onClick={getQuote}
                >
