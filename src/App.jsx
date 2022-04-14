@@ -11,7 +11,7 @@ function App() {
       textColor: "",
       fill: "",
    });
-   const [link, SetLink] = useState({
+   const [link, setLink] = useState({
       twitLink: "",
       tumbLink: "",
    });
@@ -41,7 +41,7 @@ function App() {
          encodeURIComponent(data.content) +
          "&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button";
 
-      SetLink((link) => ({
+      setLink((link) => ({
          ...link,
          twitLink,
          tumbLink,
